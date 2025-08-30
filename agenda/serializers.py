@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 class AgendamentoSerializer(serializers.ModelSerializer):
     class Meta:
-        model : Agendamento
+        model = Agendamento
         fields = [
             'data_horario',
             'nome_cliente',
