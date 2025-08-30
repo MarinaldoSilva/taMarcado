@@ -1,6 +1,8 @@
-from django.urls import include, path
-from views import AgendamentoDetailView
+from django.urls import path
+from agenda.Views.views import AgendametoListCreateView, AgendamentoRetriveUpdateDestroyView
 
 urlpatterns = [
-    path("agendamentos/<int: id>", AgendamentoDetailView.as_view(), name="agendamento-detail")
+    path("agendamentos/", AgendametoListCreateView.as_view(), name= "agendamento-list"),
+    path("agendamentos/<int:id>", AgendamentoRetriveUpdateDestroyView.as_view(), name="agendamento-detail")
+    
 ]
