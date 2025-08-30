@@ -1,6 +1,6 @@
 from django.urls import include, path
-from views import agendamento_detail
+from views import AgendamentoDetailView
 
 urlpatterns = [
-    path("agendamentos/<int: id>", agendamento_detail)#trocar por as_view() do pacote APIView
+    path("agendamentos/<int: id>", AgendamentoDetailView.as_view(), name="agendamento-detail")
 ]
