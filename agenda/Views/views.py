@@ -2,7 +2,6 @@ from ..serializers import AgendamentoSerializer
 from ..models import Agendamento
 from rest_framework import generics
 
-
 """com o ListCreate, além reronar todos os meus objs e os serializa um por um
 também cria um obj, e faz isso dependendo o verdo que esta na requisição"""
 class AgendametoListCreateView(generics.ListCreateAPIView):
@@ -17,9 +16,7 @@ class AgendamentoRetriveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView)
     queryset = Agendamento.objects.all()
     serializer_class = AgendamentoSerializer
 
-
-
-        
+    
     
 
 
