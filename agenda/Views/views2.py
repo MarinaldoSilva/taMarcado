@@ -6,7 +6,7 @@ from rest_framework.request import Request
 from rest_framework.decorators import api_view
 
 """com esse decorator, minha função recebe somente pedidos via GET""" #partial=partial_update
-@api_view(http_method_names=['GET', 'PUT'])
+@api_view(http_method_names=['GET', 'PUT', 'PATCH'])
 def agendamentoDetail(request : Request, pk):
     
     agenda = get_object_or_404(Agendamento, pk=pk)
